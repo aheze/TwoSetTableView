@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        combinedData = myFirstData + mySecondData
+        combinedData = myFirstData + mySecondData /// set combinedData (will not affect myFirstData or mySecondData)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -29,12 +29,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return combinedData.count
+        return combinedData.count /// simply return the count of the entire combinedData array
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellIdentifier", for: indexPath) as! TableCell
-        let textAtRow = combinedData[indexPath.row]
+        let textAtRow = combinedData[indexPath.row] /// also get what to display from combinedData
         cell.label.text = textAtRow
         return cell
     }
