@@ -62,7 +62,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             self.tableView.reloadRows(at: [indexPath], with: .automatic)
             
-            print("Combined: \(self.combinedData), myFirstData: \(self.myFirstData), mySecondData: \(self.mySecondData)")
+            print("Combined: \(self.combinedData),\nmyFirstData: \(self.myFirstData),\nmySecondData: \(self.mySecondData)\n")
         })
         
         action.image = UIImage(systemName: "textformat")
